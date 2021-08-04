@@ -1,4 +1,5 @@
 import React from 'react';
+import isUrlValid from 'url-validation';
 import Logo from '../../components/Logo/Logo';
 import NavProfile from '../../components/NavProfile/NavProfile';
 import Rank from '../../components/Rank/Rank';
@@ -11,6 +12,7 @@ class ProfileScreen extends React.Component {
     super(props);
     this.state = {
       input: '',
+      inputError: '',
       imageUrl: '',
       box: []
     }
@@ -40,40 +42,61 @@ class ProfileScreen extends React.Component {
     this.setState({ input: event.target.value })
   }
 
+  urlValidation = () => {
+    let inputError = '';
+
+    if (!isUrlValid(this.state.input)) {
+      inputError = 'Please enter a valid URL.';
+    }
+
+    if (inputError) {
+      this.setState({ inputError })
+      return false;
+    }
+
+    return true;
+  }
+
   onButtonSubmit = () => {
     this.setState({
       box: [], 
       imageUrl: this.state.input 
     })
 
-    fetch('https://sharp-eye-api.herokuapp.com/imageurl', {
-      method: 'post',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        input: this.state.input 
+    const isValid = this.urlValidation();
+
+    if (isValid) {
+      fetch('https://sharp-eye-api.herokuapp.com/imageurl', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          input: this.state.input 
+        })
       })
-    })
-      .then(response => response.json())
-      .then(response => {
-        if (response) {
-          fetch('https://sharp-eye-api.herokuapp.com/image', {
-            method: 'put',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              id: this.props.userState.id
+        .then(response => response.json())
+        .then(response => {
+          if (response) {
+            fetch('https://sharp-eye-api.herokuapp.com/image', {
+              method: 'put',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({
+                id: this.props.userState.id
+              })
             })
-          })
-            .then(response => response.json())
-            .then(count => {
-              this.props.userCountUpdate(count)
-            })
-            .catch(console.log)
-        }
-        for(let i = 0; i < response.outputs[0].data.regions.length; i++) {
-          this.displayFaceBox(this.calculateFaceLocation(response, i))
-        }
-      })
-      .catch(err => console.log(err))
+              .then(response => response.json())
+              .then(count => {
+                this.props.userCountUpdate(count)
+              })
+              .catch(console.log)
+          }
+          for(let i = 0; i < response.outputs[0].data.regions.length; i++) {
+            this.displayFaceBox(this.calculateFaceLocation(response, i))
+          }
+        })
+        .catch(err => console.log(err))
+      
+      this.setState({ inputError: '' }) 
+    }
   }
 
   render() {
@@ -93,6 +116,12 @@ class ProfileScreen extends React.Component {
               {'In order to detect faces enter your link here.'}
             </p>
           </div>
+          {this.state.inputError ? (
+            <div className='url-submit-error'>
+              {this.state.inputError}
+            </div>
+           ) : null
+          }
           <div className='input-container'>
             <div className='input-wrapper'>
               <input type='text' onChange={this.onInputChange}/>

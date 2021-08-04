@@ -54,6 +54,18 @@
   background: #1f2833;
 }
 
+.url-submit-error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  width: 30%;
+  padding: 5px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
 @media (max-width: 575.9px) {
   .nav-container {
     flex-direction: column;
@@ -79,6 +91,11 @@
     width: 55%;
     margin-bottom: 10px;
   }
+
+  .url-submit-error {
+    width: 80%;
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.9px) {
@@ -89,17 +106,26 @@
   .input-wrapper button {
     font-size: 1.2rem;
   }
+
+  .url-submit-error {
+    width: 60%;
+    font-size: 1.1rem;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 991.9px) {
   .input-wrapper {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.9px) {
   .profile-container p {
     font-size: 1.4rem;
+  }
+
+  .url-submit-error {
+    width: 50%;
   }
 }
 
@@ -111,5 +137,11 @@
   .input-wrapper input {
     width: 92%;
     padding: 12px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1084.9px) {
+  .url-submit-error {
+    width: 40%;
   }
 }

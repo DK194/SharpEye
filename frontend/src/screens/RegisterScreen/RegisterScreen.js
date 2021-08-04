@@ -106,10 +106,11 @@ class RegisterScreen extends React.Component {
         <div className='register-container'>
           <div className='register-form-wrapper'>
             <h1>Register</h1>
-            {this.state.registrationError === true ? 
+            {this.state.registrationError === true ? (
               <div className='form-submit-error'>
                 User with this email is already registered!
-              </div> : null
+              </div> 
+             ) : null
             }
             <div>
               <div className='register-form-group'>

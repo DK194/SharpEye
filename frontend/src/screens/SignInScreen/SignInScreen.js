@@ -93,10 +93,11 @@ class SignInScreen extends React.Component {
         <div className='signin-container'>
           <div className='signin-form-wrapper'>
             <h1>Sign In</h1>
-            {this.state.signInError === true ?
+            {this.state.signInError === true ? (
               <div className='form-submit-error'>
                 Wrong email or password.
-              </div> : null
+              </div> 
+             ) : null
             }
             <div>
               <div className='signin-form-group'>
