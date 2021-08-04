@@ -59,7 +59,7 @@ class SignInScreen extends React.Component {
     const isValid = this.signInValidation();
 
     if (isValid) {
-      fetch('http://localhost:3000/signin', {
+      fetch('https://sharp-eye-api.herokuapp.com/signin', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
