@@ -1,0 +1,44 @@
+.nav-profile {
+  margin: 0px 20px 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-profile p {
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  margin: 15px;
+  background: #0b0c10;
+  color: #fff;
+  border: 1px solid #66fcf1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-profile p:hover {
+  color: #66fcf1;
+  background: #1f2833;
+}
+
+@media (max-width: 575.9px) {
+  .nav-profile p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .nav-profile p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .nav-profile {
+    margin-bottom: 20px;
+  }
+
+  .nav-profile p {
+    padding: 10px 85px;
+    margin-top: 10px;
+  }
+}

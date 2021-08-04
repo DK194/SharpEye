@@ -1,0 +1,54 @@
+.face-detection-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.face-detection-container img {
+  width: 550px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.img-wrapper {
+  position: absolute;
+}
+
+.bounding-box {
+  position: absolute;
+  box-shadow: 0 0 0 3px #149df2 inset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 389.9px) {
+  .face-detection-container img {
+    width: 320px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 449.9px) {
+  .face-detection-container img {
+    width: 350px;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 519.9px) {
+  .face-detection-container img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 520px) and (max-width: 575.9px) {
+  .face-detection-container img {
+    width: 460px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .face-detection-container img {
+    width: 530px;
+  }
+}

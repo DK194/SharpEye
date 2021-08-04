@@ -1,0 +1,57 @@
+.rank-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.rank-container p {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.rank-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #66fcf1;
+}
+
+@media (max-width: 575.9px) {
+  .rank-container p {
+    font-size: 1.6rem;
+  }
+  
+  .rank-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .rank-container p {
+    font-size: 1.7rem;
+  }
+  
+  .rank-container h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .rank-container p {
+    font-size: 1.8rem;
+  }
+  
+  .rank-container h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 991.9px) {
+  .rank-container {
+    margin: 0px 20px;
+  }
+
+  .rank-container p {
+    margin-bottom: 10px;
+  }
+}

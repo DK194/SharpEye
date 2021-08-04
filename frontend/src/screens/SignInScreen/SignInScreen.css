@@ -1,0 +1,143 @@
+.signin-container {
+  margin: 0px auto 30px;
+  max-width: 400px;
+  padding: 10px;
+}
+
+.nav-container {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signin-form-wrapper {
+  padding: 20px 25px;
+  color: #66fcf1;
+  border-radius: 10px;
+  border: 1px solid #66fcf1;
+}
+
+.signin-form-wrapper h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.signin-form-wrapper .signin-form-group {
+  margin-top: 15px;
+}
+
+.signin-form-wrapper .signin-form-group label {
+  display: block;
+  color: #66fcf1;
+  font-size: 1.3rem;
+}
+
+.signin-form-wrapper .signin-form-group input {
+  width: 100%;
+  padding: 10px;
+  background-color: #e8f0fe;
+  border-radius: 5px;
+}
+
+.signin-form-wrapper button {
+  display: block;
+  width: 70%;
+  padding: 10px;
+  margin: 15px auto 5px;
+  background: #0b0c10;
+  color: #fff;
+  border: 1px solid #66fcf1;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.signin-form-wrapper button:hover {
+  background: #1f2833;
+  color: #66fcf1;
+}
+
+.form-submit-error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  padding: 5px;
+  margin: 10px 0px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.input-error {
+  color: #D8000C;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 575.9px) {
+  .signin-container {
+    max-width: 320px;
+  }
+
+  .signin-form-wrapper {
+    padding: 20px 20px;
+  }
+
+  .signin-form-wrapper h1 {
+    font-size: 1.9rem;
+  }
+
+  .signin-form-wrapper .signin-form-group label {
+    font-size: 1.1rem;
+  }
+
+  .signin-form-wrapper button {
+    font-size: 1.1rem;
+  }
+
+  .form-submit-error {
+    font-size: 1rem;
+  }
+  
+  .input-error {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .signin-container {
+    margin-top: 15px;
+  }
+
+  .signin-form-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .signin-form-wrapper .signin-form-group label {
+    font-size: 1.2rem;
+  }
+
+  .signin-form-wrapper button {
+    font-size: 1.2rem;
+  }
+
+  .form-submit-error {
+    font-size: 1.1rem;
+  }
+  
+  .input-error {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .nav-container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .nav-container {
+    margin-top: 20px;
+  }
+}

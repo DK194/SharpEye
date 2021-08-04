@@ -1,0 +1,39 @@
+.nav-home {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-home p {
+  padding: 10px 20px;
+  margin: 15px;
+  font-size: 1.3rem;
+  background: #0b0c10;
+  color: #fff;
+  border: 1px solid #66fcf1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-home p:hover {
+  color: #66fcf1;
+  background: #1f2833;
+}
+
+@media (max-width: 575.9px) {
+  .nav-home p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.9px) {
+  .nav-home p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 991.9px) {
+  .nav-home {
+    margin-top: 20px;
+  }
+}
