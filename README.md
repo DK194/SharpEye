@@ -2,7 +2,7 @@
 
 Sharp Eye is an app that allows you to detect faces in the pictures.
 
-![screenshot](https://github.com/DK194/SharpEye/master/uploads/sharpeye.png)
+![screenshot](https://github.com/DK194/SharpEye/blob/master/uploads/sharpeye.png)
 
 ## Description
 
