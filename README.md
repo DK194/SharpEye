@@ -12,6 +12,13 @@ Sharp Eye is an app built with React, CSS and Node JS. It uses PostgreSQL databa
 
 Sharp Eye is already deployed to Heroku, and you can check the working app [here](https://sharp-eye.herokuapp.com).
 
+In order to test it, you can either register a new user or sign in with the following credentials:
+
+```
+Email: testuser@example.com
+Password: 123456
+```
+
 However, if you want to run the app locally, you need some additional setup.
 
 ### How to start
