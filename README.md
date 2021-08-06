@@ -1,2 +1,0 @@
-# SharpEye
-Sharp Eye App.

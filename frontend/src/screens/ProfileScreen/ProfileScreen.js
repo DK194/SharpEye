@@ -66,7 +66,7 @@ class ProfileScreen extends React.Component {
     const isValid = this.urlValidation();
 
     if (isValid) {
-      fetch('https://sharp-eye-api.herokuapp.com/imageurl', {
+      fetch('http://localhost:3000/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -76,7 +76,7 @@ class ProfileScreen extends React.Component {
         .then(response => response.json())
         .then(response => {
           if (response) {
-            fetch('https://sharp-eye-api.herokuapp.com/image', {
+            fetch('http://localhost:3000/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({

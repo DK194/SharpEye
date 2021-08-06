@@ -71,7 +71,7 @@ class RegisterScreen extends React.Component {
     const isValid = this.formValidation();
 
     if (isValid) {
-      fetch('https://sharp-eye-api.herokuapp.com/register', {
+      fetch('http://localhost:3000/register', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
